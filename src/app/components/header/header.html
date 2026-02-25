@@ -1,26 +1,41 @@
 <header>
     <nav id="navbar">
-        <div class="logo">
-            <i class="fa-solid fa-burger" id=""></i>FOOD
-        </div>
-        <ul id="nav-list">
-            <li class="nav-item">
+            <i class="fa-solid fa-burger" id="nav_logo">FOOD</i>
+        <ul id="nav_list">
+            <li class="nav-item active">
                 <a href="#home">Início</a>
             </li>
-            <li>
+            <li class="nav-item">
                 <a href="#menu">Cardápio</a>
             </li>
-            <li>
+            <li class="nav-item">
                 <a href="#testimonials">Avaliações</a>
             </li>
         </ul>
 
-      <app-button-default></app-button-default>
+        <app-button-default></app-button-default>
 
-      <button>
-        <i class="fas fa-solid fa-bars"></i>
-      </button>
+        <button>
+            <i class="fas fa-solid fa-bars"></i>
+        </button>
 
     </nav>
+
+    <div id="mobile_menu">
+
+        <ul id="mobile_nav_list">
+            <li class="nav-item">
+                <a href="#home">Início</a>
+            </li>
+            <li class="nav-item">
+                <a href="#menu">Cardápio</a>
+            </li>
+            <li class="nav-item">
+                <a href="#testimonials">Avaliações</a>
+            </li>
+        </ul>
+
+        <app-button-default></app-button-default>
+    </div>
 
 </header>
