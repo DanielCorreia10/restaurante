@@ -1,42 +1,27 @@
 <header>
     <nav id="navbar">
-        <i class="fa-solid fa-burger" id="nav_logo">FOOD</i>
-        <ul id="nav_list">
-            <li class="nav-item active">
-                <a href="#home">Início</a>
-            </li>
-            <li class="nav-item">
-                <a href="#menu">Cardápio</a>
-            </li>
-            <li class="nav-item">
-                <a href="#testimonials">Avaliações</a>
-            </li>
-        </ul>
+        <div id="nav_logo">
+            <i class="fa-solid fa-burger"></i> FOOD
+        </div>
 
-        <app-button-default text="Pedir Agora"></app-button-default>
-
-   
-        <button id="mobile_btn" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen" aria-label="Abrir menu">
+        <button id="mobile_btn" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen" aria-label="Alternar menu">
             <i class="fas fa-solid" [class.fa-bars]="!isMenuOpen" [class.fa-x]="isMenuOpen"></i>
         </button>
 
+        <div id="nav_menu" [class.open]="isMenuOpen">
+            <ul id="nav_list">
+                <li class="nav-item active">
+                    <a href="#home" (click)="closeMenu()">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu" (click)="closeMenu()">Cardápio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#testimonials" (click)="closeMenu()">Avaliações</a>
+                </li>
+            </ul>
+
+            <app-button-default text="Pedir Agora" (click)="closeMenu()"></app-button-default>
+        </div>
     </nav>
-
-    <div id="mobile_menu" [class.open]="isMenuOpen">
-
-        <ul id="mobile_nav_list">
-            <li class="nav-item">
-                <a href="#home" (click)="closeMenu()">Início</a>
-            </li>
-            <li class="nav-item">
-                <a href="#menu" (click)="closeMenu()">Cardápio</a>
-            </li>
-            <li class="nav-item">
-                <a href="#testimonials" (click)="closeMenu()">Avaliações</a>
-            </li>
-        </ul>
-
-        <app-button-default text="Pedir Agora"></app-button-default>
-    </div>
-
 </header>
