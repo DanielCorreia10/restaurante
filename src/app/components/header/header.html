@@ -15,23 +15,24 @@
 
         <app-button-default class="btn-default"></app-button-default>
 
-        <button id="mobile_btn">
-            <i class="fas fa-solid fa-bars"></i>
+   
+        <button id="mobile_btn" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen" aria-label="Abrir menu">
+            <i class="fas fa-solid" [class.fa-bars]="!isMenuOpen" [class.fa-x]="isMenuOpen"></i>
         </button>
 
     </nav>
 
-    <div id="mobile_menu">
+    <div id="mobile_menu" [class.open]="isMenuOpen">
 
         <ul id="mobile_nav_list">
             <li class="nav-item">
-                <a href="#home">Início</a>
+                <a href="#home" (click)="closeMenu()">Início</a>
             </li>
             <li class="nav-item">
-                <a href="#menu">Cardápio</a>
+                <a href="#menu" (click)="closeMenu()">Cardápio</a>
             </li>
             <li class="nav-item">
-                <a href="#testimonials">Avaliações</a>
+                <a href="#testimonials" (click)="closeMenu()">Avaliações</a>
             </li>
         </ul>
 

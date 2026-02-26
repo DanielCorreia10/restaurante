@@ -9,4 +9,13 @@ import { ButtonDefault } from '../button-default/button-default';
 })
 export class Header {
 
+  isMenuOpen: boolean = false;
+
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu(): void {
+    this.isMenuOpen = false;
+  }
 }
