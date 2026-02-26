@@ -51,7 +51,7 @@ header {
     }
 
     #nav_list,
-    #navbar .btn-default {
+    #navbar app-button-default {
         display: none;
     }
 
