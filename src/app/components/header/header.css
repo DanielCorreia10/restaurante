@@ -73,10 +73,10 @@ header {
 
     #nav_menu {
         flex: none;
+        justify-content: center;
         width: 100%;
         flex-direction: column;
         gap: 20px;
-        
         max-height: 0;
         opacity: 0;
         overflow: hidden;
