@@ -1,0 +1,13 @@
+<section class="menu">
+    <h2 class="section-title">Cardápio</h2>
+    <h3 class="section-subtitle">Nossos pratos especiais</h3>
+
+    <div class="dishes">
+        @for(dish of dishes; track dish.id) {
+          <app-dish [dishData]="dish"></app-dish>
+        } @empty {
+            <p>Nenhum prato disponível no momento.</p>
+        }
+    </div>
+
+</section>

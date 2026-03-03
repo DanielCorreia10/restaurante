@@ -1,0 +1,28 @@
+@if (dishData) {
+    <div class="dish">
+        <div class="dish-heart">
+            <i class="fas fa-heart"></i>
+        </div>
+
+        <img [src]="dishData.imageUrl" [alt]="dishData.name" class="dish-image">
+
+        <div class="dish-info">
+            <h3 class="dish-name">{{ dishData.name }}</h3>
+            <span class="dish-description">{{ dishData.description }}</span>
+        </div>
+
+        <div class="dish-rate">
+            @for (star of starsArray; track $index) {
+                <i class="fas fa-star" [class.fa-regular]="star > dishData.rating"></i>
+            }
+            <span>({{ dishData.reviewsCount }})</span>
+        </div>
+
+        <div class="dish-price">
+            <h4 class="dish-price">{{ dishData.price | currency:'BRL':'symbol' }}</h4>
+            <app-button-default>
+                <i class="fa-solid fa-basket-shopping"></i>
+            </app-button-default>
+        </div>
+    </div>
+}
