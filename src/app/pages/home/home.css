@@ -1,27 +1,30 @@
-#home {
+.home {
     display: flex;
-    min-height: calc(100vh - 83px);
+    min-height: calc(100vh - 96px);
     position: relative;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
 }
 
-#cta {
-    width: 35%;
+.cta {
+    width: 45%;
     display: flex;
     flex-direction: column;
     gap: 28px;
-    margin-top: 5%;
+    padding-bottom: 100px;
 }
 
-#cta .title {
+.cta .title {
     font-size: 4rem;
     color: #1d1d1d;
 }
 
-#cta .title span {
+.cta .title span {
     color: #e9a209;
 }
 
-#cta .description {
+.cta .description {
     font-size: 1.2rem;
 }
 
@@ -34,18 +37,18 @@
     cursor: pointer;
 }
 
-#cta_buttons {
+.cta_buttons {
     display: flex;
     align-items: center;
     gap: 24px;
 }
 
-#cta_buttons a {
+.cta_buttons a {
     text-decoration: none;
     color: #1d1d1d;
 }
 
-#phone_button {
+.phone_button {
     display: flex;
     gap: 8px;
     align-items: center;
@@ -53,7 +56,7 @@
     background-color: #fff;
     border-radius: 12px;
     font-weight: 500;
-    padding: 10px 10px;
+    padding: 10px 15px;
     height: 40px;
     box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
 }
@@ -76,14 +79,15 @@
     text-decoration: none;
     border-radius: 12px;
     box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-}
-.social-media-buttons a:hover {
-    box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.1);
-    scale: 1.05;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-#banner{
+.social-media-buttons a:hover {
+    box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+}
+
+.banner {
     display: flex;
     align-items: start;
     justify-content: end;
@@ -91,9 +95,10 @@
     z-index: 2;
 }
 
-#banner img{
-    height: 100%;
-    width: fit-content;
+.banner img {
+    max-height: 80vh;
+    width: 100%;
+    object-fit: contain;
 }
 
 .shape {
@@ -108,39 +113,50 @@
 }
 
 @media screen and (max-width: 1170px) {
-    #home { 
-        min-height: 100%;
-        padding-top: 0px;
+    .home {
         flex-direction: column;
-        position: relative;
+        justify-content: center;
+        text-align: center;
+        padding: 50px 5%;
     }
 
-    #cta .title {
-        font-size: 2.5rem;
+    .cta {
+        width: 100%;
+        align-items: center;
+        order: 2;
+    }
+
+    .cta .title {
+        font-size: 3rem;
+    }
+
+    .banner {
+        width: 100%;
+        margin-bottom: 30px;
+        order: 1;
+    }
+
+    .banner img {
+        height: auto;
+        max-height: 50vh;
     }
 
     .shape {
+        width: 100vw;
+        height: 50vh;
+        top: 0;
+        right: 0;
+        border-radius: 0 0 50% 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cta .title {
+        font-size: 2.5rem;
+    }
+
+    .cta_buttons {
+        flex-direction: column;
         width: 100%;
-        height: 50%;
-        top: 25%;
-        left: 50%;
-        right: 50%;
-
     }
-
-    #banner{
-        justify-content: center;
-    }
-
-    #banner img {
-        height: 200px;
-    }
-
-    #cta {
-        width: 100%;
-        text-align: center;
-        align-items: center;
-    }
-
-
 }

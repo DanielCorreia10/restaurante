@@ -14,3 +14,12 @@ background: linear-gradient(90deg, rgba(245, 235, 213, 1) 0%, rgba(255, 249, 234
 section{
     padding: 28px 8%;
 }
+
+:root {
+    --primary-color: #e9a209;
+    --secondary-color: #ffcb45;
+    --background: #f1f1f1;
+    --text-color: #1d1d1d;
+    --text-light: #fff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
