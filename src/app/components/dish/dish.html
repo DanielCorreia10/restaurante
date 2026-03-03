@@ -13,13 +13,13 @@
 
         <div class="dish-rate">
             @for (star of starsArray; track $index) {
-                <i class="fas fa-star" [class.fa-regular]="star > dishData.rating"></i>
+                <i class="fa-star" [class.fas]="star <= dishData.rating" [class.far]="star > dishData.rating"></i>
             }
             <span>({{ dishData.reviewsCount }})</span>
         </div>
 
         <div class="dish-price">
-            <h4 class="dish-price">{{ dishData.price | currency:'BRL':'symbol' }}</h4>
+            <h4 class="dish-price">{{ dishData.price | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}</h4>
             <app-button-default>
                 <i class="fa-solid fa-basket-shopping"></i>
             </app-button-default>

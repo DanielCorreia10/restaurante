@@ -1,3 +1,8 @@
+:host {
+    display: block;
+    height: 100%;
+}
+
 .dish {
     display: flex;
     position: relative;
@@ -6,6 +11,7 @@
     border-radius: 20px;
     gap: 18px;
     width: 100%;
+    height: 100%;
     padding: 20px;
     background-color: #ffffff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -14,17 +20,19 @@
 }
 
 .dish-image {
-    width: 100%;
+    width: 50%;
     object-fit: cover;
     border-radius: 12px;
 }
 
-.dish-info{
+.dish-info {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 8px;
+    flex-grow: 1;
 }
+
 .dish-heart {
     position: absolute;
     background-color: var(--primary-color);
@@ -37,7 +45,7 @@
     height: 70px;
     top: 0;
     right: 0;
-    border-radius: 0 12px 0 42.5px;
+    border-radius: 0 20px 0 42.5px;
 }
 
 .dish:hover {
@@ -45,19 +53,24 @@
 }
 
 .dish-description {
-    display: flex;
-    flex-direction: column;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
     text-align: center;
+    color: #666;
 }
 
-.dish-rate i{
+.dish-rate i {
     color: var(--primary-color);
 }
 
 .dish-price {
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     gap: 20px;
 }
+
 

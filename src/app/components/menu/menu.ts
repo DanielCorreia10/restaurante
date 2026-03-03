@@ -26,7 +26,7 @@ export class Menu {
       name: 'Feijoada Completa',
       description: 'Nossa tradicional feijoada com carnes selecionadas, arroz, farofa e couve.',
       imageUrl: '/images/dish2.png',
-      rating: 5,
+      rating: 2,
       reviewsCount: '850+',
       price: 49.90
     },
@@ -44,7 +44,7 @@ export class Menu {
       name: 'Bife à Parmegiana',
       description: 'Suculento bife empanado, coberto com queijo derretido e molho de tomate caseiro.',
       imageUrl: '/images/dish4.png',
-      rating: 5,
+      rating: 3,
       reviewsCount: '1k+',
       price: 54.00
     },
@@ -53,7 +53,7 @@ export class Menu {
       name: 'Acarajé Tradicional',
       description: 'Bolinho de feijão-fradinho frito no azeite de dendê, recheado com vatapá, caruru e camarão seco.',
       imageUrl: '/images/dish5.png',
-      rating: 5,
+      rating: 3,
       reviewsCount: '2k+',
       price: 25.00
     },
@@ -62,7 +62,7 @@ export class Menu {
       name: 'Bobó de Camarão',
       description: 'Creme de mandioca com azeite de dendê, leite de coco e camarões frescos, acompanhado de arroz.',
       imageUrl: '/images/dish6.png',
-      rating: 5,
+      rating: 4,
       reviewsCount: '730+',
       price: 72.50
     },
@@ -80,7 +80,7 @@ export class Menu {
       name: 'Frango com Quiabo',
       description: 'Prato reconfortante de frango caipira ensopado com quiabo, servido com angu de milho.',
       imageUrl: '/images/dish8.png',
-      rating: 4,
+      rating: 1,
       reviewsCount: '210+',
       price: 38.90
     }
