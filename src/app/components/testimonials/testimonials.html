@@ -1,0 +1,36 @@
+<section class="testimonials">
+    <img class="chef" src="/images/chef.png" alt="Imagem de um chef de cozinha">
+    
+    <div class="testimonials-content">
+        <div class="testimonials-titles">
+            <h2 class="section-title">Depoimentos</h2>
+            <h3 class="section-sub-title">O que nossos clientes dizem sobre nós</h3>
+        </div>
+        
+        <div class="feedbacks">
+            @for(review of reviews; track review.id) {
+                @if ($index < 3) { 
+                    <div class="feedback">
+                        <img [src]="review.imageUrl" alt="Avatar do cliente">
+
+                        <div class="feedback-content">
+                            <div class="feedback-header">
+                                <p>{{review.name}}</p>
+                                <span>
+                                    @for(star of starArray; track $index) {
+                                        <i class="fa-star" [class.fas]="star <= review.rating"
+                                            [class.far]="star > review.rating"></i>
+                                    }
+                                </span>
+                            </div>
+                            <div class="feedback-comment">
+                                <p>{{review.comment}}</p>
+                            </div>
+                        </div>
+                    </div>
+                }  
+            }
+        </div>
+        <app-button-default text="Ver mais avaliações"></app-button-default>
+    </div>
+</section>

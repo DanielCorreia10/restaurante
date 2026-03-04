@@ -1,6 +1,6 @@
 .home {
     display: flex;
-    min-height: calc(100vh - 96px);
+    min-height: calc(100vh - 83px);
     position: relative;
     align-items: center;
     justify-content: space-between;
