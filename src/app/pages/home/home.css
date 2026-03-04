@@ -86,6 +86,21 @@
     transform: scale(1.05);
 }
 
+.social-media-buttons a.whatsapp:hover {
+    color: #25d366;
+    transition: 0.3s ease;
+}
+
+.social-media-buttons a.instagram:hover {
+    color: #e4405f;
+    transition: 0.3s ease;
+}
+
+.social-media-buttons a.facebook:hover {
+    color: #1877f2;
+    transition: 0.3s ease;
+}
+
 .banner {
     display: flex;
     align-items: start;
