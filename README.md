@@ -1,3 +1,5 @@
+# Link do projeto em produção: https://site-restaurante-food.netlify.app/#home 
+
 # Projeto
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.5.
